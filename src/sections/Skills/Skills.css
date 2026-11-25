@@ -82,12 +82,15 @@
   }
 }
 
+
 /* Scroll-triggered section animation */
 
 .skills-section {
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.9s ease, transform 0.9s ease;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
 }
 
 .skills-section.visible {
@@ -95,41 +98,33 @@
   transform: translateY(0);
 }
 
-/* Individual skill card animations */
+/* Staggered skill card animation */
 
 .skills-section .skill-card {
   opacity: 0;
-  transform: translateY(25px);
+  transform: translateY(35px);
   transition:
     opacity 0.7s ease,
     transform 0.7s ease,
     box-shadow 0.35s ease,
     border-color 0.35s ease;
+
+  transition-delay: 0s;
 }
 
 .skills-section.visible .skill-card {
   opacity: 1;
   transform: translateY(0);
+
+  transition-delay: calc(var(--card-index) * 0.12s);
 }
 
-.skills-section.visible .skill-card:nth-child(2) {
-  transition-delay: 0.1s;
-}
+/* Card hover effect */
 
-.skills-section.visible .skill-card:nth-child(3) {
-  transition-delay: 0.2s;
-}
-
-.skills-section.visible .skill-card:nth-child(4) {
-  transition-delay: 0.3s;
-}
-
-.skills-section.visible .skill-card:nth-child(5) {
-  transition-delay: 0.4s;
-}
-
-.skills-section.visible .skill-card:nth-child(6) {
-  transition-delay: 0.5s;
+.skills-section.visible .skill-card:hover {
+  transform: translateY(-8px);
+  border-color: #93c5fd;
+  box-shadow: 0 16px 35px rgba(37, 99, 235, 0.1);
 }
 
 /* Accessibility */
@@ -141,6 +136,10 @@
     opacity: 1;
     transform: none;
     transition: none;
+  }
+
+  .skills-section.visible .skill-card {
+    transition-delay: 0s;
   }
 
   .skill-card::before {

@@ -15,7 +15,7 @@ function About() {
       aria-labelledby="about-heading"
     >
 
-      <div className='section-heading'>
+      <div className='section-heading about-heading'>
         <p>GET TO KNOW ME</p>
         <h2 id="about-heading">About Me</h2>
       </div>
@@ -25,15 +25,15 @@ function About() {
         <div className='about-text'>
           {
             aboutParagraphs.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
+              <p key={index} style={{ '--card-index': index } as React.CSSProperties}>{paragraph}</p>
             ))
           }
         </div>
 
         <div className='about-details'>
           {
-            aboutStats.map((stat) => (
-              <div className="detail-card">
+            aboutStats.map((stat, index) => (
+              <div className="detail-card" key={stat.label} style={{ '--card-index': index } as React.CSSProperties}>
                 <h3>{stat.value}</h3>
                 <p>{stat.label}</p>
               </div>

@@ -14,7 +14,7 @@ function Experience() {
       aria-labelledby="experience-heading"
     >
 
-      <div className="section-heading">
+      <div className="section-heading experience-heading">
         <p>MY CAREER JOURNEY</p>
         <h2 id="experience-heading">Professional Experience</h2>
         <span>My professional journey and technical contributions.</span>
@@ -23,7 +23,11 @@ function Experience() {
       <div className="experience-timeline">
         {
           experiences.map((item, index) => (
-            <div className="experience-item" key={item.company}>
+            <div
+              className="experience-item"
+              key={item.company}
+              style={{ '--card-index': index } as React.CSSProperties}
+            >
 
               <div className="timeline-marker">
                 {index + 1}

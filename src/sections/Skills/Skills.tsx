@@ -5,11 +5,12 @@ import './Skills.css';
 
 interface SkillCardProps {
   skill: (typeof skills)[number];
+  index: number;
 }
 
-function SkillCard({ skill }: SkillCardProps) {
+function SkillCard({ skill, index }: SkillCardProps) {
   return (
-    <div className="skill-card">
+    <div className="skill-card" style={{ '--card-index': index } as React.CSSProperties}>
       <h3>{skill.name}</h3>
       <span>{skill.category}</span>
       <p>{skill.description}</p>
@@ -35,8 +36,8 @@ function Skills() {
 
       <div className="skills-grid">
         {
-          skills.map((skill) => (
-            <SkillCard key={skill.name} skill={skill} />
+          skills.map((skill, index) => (
+            <SkillCard key={skill.name} skill={skill} index={index} />
           ))
         }
       </div>

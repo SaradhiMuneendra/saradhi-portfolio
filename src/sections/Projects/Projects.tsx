@@ -5,11 +5,12 @@ import './Projects.css';
 
 interface ProjectCardProps {
   project: (typeof projects)[number];
+  index: number
 }
 
-function ProjectCard({ project }: ProjectCardProps) {
+function ProjectCard({ project, index }: ProjectCardProps) {
   return (
-    <article className='project-card'>
+    <article className='project-card' style={{ '--card-index': index } as React.CSSProperties}>
 
       <div className="project-card-header">
         <span className='project-type'>
@@ -57,7 +58,7 @@ function Projects() {
       aria-labelledby="projects-heading"
     >
 
-      <div className="section-heading">
+      <div className="section-heading project-heading">
         <p>MY WORK</p>
         <h2 id="projects-heading">Featured Projects</h2>
         <span>
@@ -67,8 +68,8 @@ function Projects() {
 
       <div className="projects-grid">
         {
-          projects.map((project) => (
-            <ProjectCard key={project.title} project={project} />
+          projects.map((project, index) => (
+            <ProjectCard key={project.title} project={project} index={index} />
           ))
         }
       </div>

@@ -94,12 +94,13 @@
   }
 }
 
-/* Scroll animation */
-
+/* Section Reveal Animation */
 .about-section {
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.9s ease, transform 0.9s ease;
+  transform: translateY(45px);
+  transition:
+    opacity 1s ease,
+    transform 1s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .about-section.visible {
@@ -107,48 +108,65 @@
   transform: translateY(0);
 }
 
-/* Animate individual content */
+/* Heading Reveal Animation */
+.about-section .about-heading {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s ease 0.15s,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.15s;
+}
 
-.about-section .section-heading,
-.about-section .about-text,
-.about-section .detail-card {
+.about-section.visible .about-heading {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Paragraph Staggered Animation */
+.about-section .about-text p {
   opacity: 0;
   transform: translateY(25px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.about-section.visible .section-heading {
+.about-section.visible .about-text p {
   opacity: 1;
   transform: translateY(0);
+  transition-delay: calc(var(--card-index) * 0.18s + 0.3s);
 }
 
-.about-section.visible .about-text {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0.2s;
+/* Statistics Card Animation */
+.about-section .detail-card {
+  opacity: 0;
+  transform: translateY(35px) scale(0.96);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
 }
 
 .about-section.visible .detail-card {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
+  transition-delay: calc(var(--card-index) * 0.15s + 0.35s);
 }
 
-.about-section.visible .detail-card:nth-child(2) {
-  transition-delay: 0.15s;
+/* Statistics Card Hover */
+.about-section.visible .detail-card:hover {
+  transform: translateY(-8px) scale(1);
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.1);
+  border-color: #bfdbfe;
 }
 
-.about-section.visible .detail-card:nth-child(3) {
-  transition-delay: 0.3s;
-}
-
-.about-section.visible .detail-card:nth-child(4) {
-  transition-delay: 0.45s;
-}
-
+/* Accessibility */
 @media (prefers-reduced-motion: reduce) {
+
   .about-section,
-  .about-section .section-heading,
-  .about-section .about-text,
+  .about-section .about-heading,
+  .about-section .about-text p,
   .about-section .detail-card {
     opacity: 1;
     transform: none;

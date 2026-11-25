@@ -14,7 +14,7 @@ function Contact() {
       aria-labelledby="contact-heading"
     >
 
-      <div className="section-heading">
+      <div className="section-heading contact-heading">
         <p>{contactHeading.eyebrow}</p>
         <h2 id="contact-heading">{contactHeading.title}</h2>
         <span>{contactHeading.description}</span>
@@ -26,8 +26,8 @@ function Contact() {
           <p>{contactInfo.description}</p>
 
           {
-            contactItems.map((item) => (
-              <div className="contact-item" key={item.label}>
+            contactItems.map((item, index) => (
+              <div className="contact-item" key={item.label} style={{ '--card-index': index } as React.CSSProperties}>
                 <strong>{item.label}</strong>
                 <a
                   href={item.href}
@@ -53,8 +53,8 @@ function Contact() {
         <div className="contact-message">
           <ul>
             {
-              contactHighlights.map((highlight) => (
-                <li key={highlight}>{highlight}</li>
+              contactHighlights.map((highlight, index) => (
+                <li key={highlight} style={{ '--card-index': index } as React.CSSProperties}>{highlight}</li>
               ))
             }
           </ul>
