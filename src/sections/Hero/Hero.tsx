@@ -50,7 +50,7 @@ function Hero() {
           <div className="hero-image-frame">
             <img
               src="/profile-photo.png"
-              alt="Saradhi Muneendra Gundabattina, Senior Angular and Full Stack Developer"
+              alt="Saradhi Muneendra Gundabattina, Senior Angular Developer"
               loading="eager"
               fetchPriority="high"
             />
