@@ -1,0 +1,254 @@
+.experience-section {
+  padding: 100px 8%;
+  background: #ffffff;
+}
+
+.experience-section .section-heading {
+  margin-bottom: 55px;
+}
+
+.section-heading span {
+  display: block;
+  color: #64748b;
+  margin-top: 12px;
+  font-size: 15px;
+}
+
+.experience-timeline {
+  max-width: 950px;
+  margin: 60px auto 0;
+  position: relative;
+}
+
+/* Timeline vertical line */
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  left: 19px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg,
+      #2563eb,
+      #a5b4fc,
+      #e0e7ff);
+}
+
+.experience-item {
+  display: flex;
+  gap: 25px;
+  position: relative;
+  margin-bottom: 42px;
+}
+
+/* Timeline marker */
+.timeline-marker {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  z-index: 1;
+  border: 4px solid #ffffff;
+  box-shadow: 0 0 0 3px #dbeafe;
+  transition: transform 0.3s ease;
+}
+
+.experience-item:hover .timeline-marker {
+  transform: scale(1.15);
+}
+
+/* Experience card */
+.experience-card {
+  flex: 1;
+  background: linear-gradient(145deg, #ffffff, #f8fafc);
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 30px;
+  transition: border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-6px);
+  border-color: #bfdbfe;
+  box-shadow: 0 15px 35px rgba(37, 99, 235, 0.09);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.experience-header h3 {
+  color: #111827;
+  font-size: 21px;
+  font-weight: 750;
+}
+
+.experience-header h4 {
+  color: #2563eb;
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+.experience-duration {
+  color: #1d4ed8;
+  font-size: 13px;
+  font-weight: 600;
+  background: #eff6ff;
+  padding: 8px 13px;
+  border-radius: 20px;
+  height: fit-content;
+}
+
+.experience-project {
+  color: #475569;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.experience-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 20px 0;
+}
+
+.experience-tech span {
+  background: #eff6ff;
+  color: #1d4ed8;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.experience-tech span:hover {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.experience-card h5 {
+  color: #1e293b;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.experience-card ul {
+  padding-left: 20px;
+}
+
+.experience-card li {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 7px;
+}
+
+/* Tablet and mobile */
+@media (max-width: 768px) {
+  .experience-section {
+    padding: 75px 6%;
+  }
+
+  .experience-item {
+    gap: 15px;
+  }
+
+  .experience-card {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 600px) {
+  .experience-section {
+    padding: 60px 5%;
+  }
+
+  .experience-timeline {
+    margin-top: 40px;
+  }
+
+  .experience-item {
+    gap: 12px;
+  }
+
+  .experience-card {
+    padding: 18px;
+  }
+
+  .experience-header h3 {
+    font-size: 17px;
+  }
+
+  .experience-header h4 {
+    font-size: 14px;
+  }
+
+  .experience-duration {
+    font-size: 12px;
+  }
+}
+
+
+/* Scroll-triggered section animation */
+
+.experience-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.experience-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Experience cards animation */
+
+.experience-section .experience-card {
+  opacity: 0;
+  transform: translateY(25px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease,
+    box-shadow 0.35s ease;
+}
+
+.experience-section.visible .experience-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.experience-section.visible .experience-item:nth-child(2) .experience-card {
+  transition-delay: 0.2s;
+}
+
+.experience-section.visible .experience-item:nth-child(3) .experience-card {
+  transition-delay: 0.4s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .experience-section,
+  .experience-section .experience-card {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .experience-card,
+  .timeline-marker,
+  .experience-tech span {
+    transition: none;
+  }
+}
