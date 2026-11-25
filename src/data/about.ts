@@ -1,12 +1,12 @@
 
 export const aboutParagraphs: string[] = [
-  "I'm a Senior Angular and Full Stack Developer with 9.6 years of experience building enterprise web applications across healthcare, cybersecurity, analytics and digital publishing domains.",
+  "I'm a Senior Frontend Developer with 9.6 years of experience building scalable, responsive, and enterprise-grade web applications across healthcare, cybersecurity, analytics, and digital publishing domains.",
 
-  'My primary expertise is Angular development, including Angular 10–18, TypeScript, RxJS, NgRx, reusable components, application architecture, and performance optimization.',
+  "I have strong expertise in Angular (Angular 10–18) and 3 years of professional experience with React. My technical skill set includes TypeScript, JavaScript, RxJS, NgRx, React, reusable components, frontend architecture, and performance optimization.",
 
-  'I also have 3 years of professional experience developing backend applications using Python and FastAPI, including REST APIs, business logic, Pydantic validation and JWT authentication.',
+  "Throughout my career, I have developed complex enterprise applications, implemented reusable UI components, integrated REST APIs, managed application state, implemented role-based access control, and built responsive user interfaces.",
 
-  'Additionally, I have experience with React, Node.js, MySQL and SQL Server. I enjoy solving complex technical problems and building scalable, maintainable applications.',
+  "I have also worked on Nighthawk, an AI-powered chatbot application built using React, integrating AI-driven conversational experiences into the user interface. I enjoy solving complex technical challenges and building maintainable, high-performance frontend applications."
 ];
 
 export interface AboutStat {
@@ -17,11 +17,15 @@ export interface AboutStat {
 export const aboutStats: AboutStat[] = [
   {
     value: '9.6+',
-    label: 'Years Experience',
+    label: 'Total Experience',
   },
   {
-    value: '3+',
-    label: 'Years Python / FastAPI',
+    value: '8.5+',
+    label: 'Angular Experience',
+  },
+  {
+    value: '3.0+',
+    label: 'React Experience',
   },
   {
     value: '4',

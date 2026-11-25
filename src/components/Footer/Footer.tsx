@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer className='footer'>
       <p>
-        © {new Date().getFullYear()} Saradhi Muneendra Gundabattina.
+        © {new Date().getFullYear()} Saradhimuneendra Gundabattina.
         All rights reserved.
       </p>
 

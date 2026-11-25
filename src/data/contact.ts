@@ -19,6 +19,11 @@ export const contactInfo = {
 
 export const contactItems: ContactItem[] = [
   {
+    label: 'Phone',
+    value: '+91 9701470975',
+    href: 'tel:+919701470975',
+  },
+  {
     label: 'Email',
     value: 'saradhi975@gmail.com',
     href: 'mailto:saradhi975@gmail.com',
@@ -43,9 +48,11 @@ export const resumeLink = {
 };
 
 export const contactHighlights: string[] = [
-  '9.6 years of software development experience.',
-  'Enterprise Angular application expertise.',
-  'Frontend and backend development experience.',
-  'Experience with scalable application architecture.',
-  'Strong focus on maintainable and reusable code.',
+  '9.6+ years of professional software development experience.',
+  '8.5+ years of hands-on Angular development experience.',
+  '3+ years of professional React development experience.',
+  'Expertise in building scalable enterprise frontend applications.',
+  'Strong experience in reusable components, state management and frontend architecture.',
+  'Focused on responsive UI development, application performance and code quality.',
+  'Experience developing AI-powered chatbot interfaces using React.',
 ];

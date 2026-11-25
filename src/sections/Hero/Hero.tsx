@@ -13,19 +13,20 @@ function Hero() {
           </p>
 
           <h1>
-            Hi, I'm Saradhi Muneendra Gundabattina
+            Hi, I'm Saradhimuneendra Gundabattina
           </h1>
 
           <h2>
-            Senior Angular & Full Stack Developer
+            Senior Frontend Developer
           </h2>
 
           <p className="hero-description">
-            Angular Specialist | TypeScript | RxJS | NgRx | Python | FastAPI.
+            Angular Specialist | React | TypeScript | JavaScript | RxJS | NgRx.
             <br />
-            I have 9.6 years of experience building scalable enterprise
-            applications, with expertise in frontend development and
-            backend engineering.
+            Senior Frontend Developer with 9.6+ years of experience 
+            building scalable, responsive, and high-performance 
+            enterprise web applications. Specialized in Angular development, 
+            with hands-on experience in React, modern JavaScript, and frontend architecture.
           </p>
 
           <div className="hero-buttons">
