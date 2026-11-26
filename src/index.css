@@ -15,6 +15,11 @@ body {
   color: #111827;
 }
 
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

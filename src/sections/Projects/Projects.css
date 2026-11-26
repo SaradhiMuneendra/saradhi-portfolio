@@ -217,6 +217,7 @@
   transform: translateY(0) scale(1);
 
   transition-delay: calc(var(--card-index) * 0.18s + 0.35s);
+  transition-delay: 0s;
 }
 
 /* =================================

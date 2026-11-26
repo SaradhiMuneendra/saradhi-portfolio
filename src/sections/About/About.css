@@ -50,7 +50,7 @@
 
 .detail-card {
   background: linear-gradient(145deg, #f8fafc, #eff6ff);
-  padding: 28px 20px;
+  padding: 40px 20px;
   border: 1px solid #e2e8f0;
   border-radius: 14px;
   text-align: center;
@@ -159,6 +159,7 @@
   transform: translateY(-8px) scale(1);
   box-shadow: 0 14px 30px rgba(37, 99, 235, 0.1);
   border-color: #bfdbfe;
+  transition-delay: 0s;
 }
 
 /* Accessibility */
